@@ -1,41 +1,18 @@
+// Pom --------------------------
 function tocaSomPom () {
-document.querySelector('#som_tecla_pom').play()
+    document.querySelector('#som_tecla_pom').play();
 }
 
-document.querySelector('.tecla_pom').onclick = tocaSomPom;
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
-function tocaSomClap () {
-    document.querySelector('#som_tecla_clap').play()
-    }
-    
-    document.querySelector('.tecla_clap').onclick = tocaSomClap;
+let contador = 0;
 
-    function tocaSomTim () {
-        document.querySelector('#som_tecla_tim').play()
-        }
-        
-        document.querySelector('.tecla_tim').onclick = tocaSomTim;
+//enquanto
+while (contador < listaDeTeclas.length) {
 
-    function tocaSomPuff () {
-            document.querySelector('#som_tecla_puff').play()
-            }
-            
-            document.querySelector('.tecla_puff').onclick = tocaSomPuff;
+    listaDeTeclas[contador].onclick = tocaSomPom;
 
-     function tocaSomSplash () {
-                document.querySelector('#som_tecla_splash').play()
-                }
-                
-                document.querySelector('.tecla_splash').onclick = tocaSomSplash;
-    
-     function tocaSomToim() {
-                    document.querySelector('#som_tecla_toim').play()
-                    }
-                    
-                    document.querySelector('.tecla_toim').onclick = tocaSomToim;
+    contador = contador + 1;
 
-    function tocaSomPsh () {
-                        document.querySelector('#som_tecla_psh').play()
-                        }
-                        
-                        document.querySelector('.tecla_psh').onclick = tocaSomPsh;
+    console.log(contador);
+}
